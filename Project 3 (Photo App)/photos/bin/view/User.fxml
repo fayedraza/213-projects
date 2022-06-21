@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.UserController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ListView fx:id="albumListView" layoutX="14.0" layoutY="68.0" prefHeight="278.0" prefWidth="200.0" />
+            <Label layoutX="100.0" layoutY="36.0" text="Albums" />
+            <Label layoutX="306.0" layoutY="36.0" text="Album Info" />
+            <Label layoutX="244.0" layoutY="85.0" text="Name" />
+            <Label layoutX="248.0" layoutY="178.0" text="Numer of Photos: " />
+            <Label fx:id="photoCountLabel" layoutX="249.0" layoutY="207.0" text="N/A" />
+            <Label layoutX="246.0" layoutY="238.0" text="Date Range (from-to)" />
+            <TextField fx:id="albumNameField" layoutX="243.0" layoutY="110.0" />
+            <DatePicker fx:id="fromDate" editable="false" layoutX="234.0" layoutY="267.0" prefHeight="26.0" prefWidth="84.0" />
+            <DatePicker fx:id="toDate" editable="false" layoutX="328.0" layoutY="267.0" prefHeight="26.0" prefWidth="84.0" />
+            <Button fx:id="albumViewButton" layoutX="266.0" layoutY="333.0" mnemonicParsing="false" text="View Album" />
+            <Label layoutX="508.0" layoutY="36.0" text="Create Album" />
+            <TextField fx:id="createAlbumField" layoutX="470.0" layoutY="68.0" />
+            <Button fx:id="addAlbumButton" layoutX="508.0" layoutY="97.0" mnemonicParsing="false" text="Add Album" />
+            <Button fx:id="deleteAlbumButton" layoutX="502.0" layoutY="149.0" mnemonicParsing="false" text="Delete Album" />
+            <Label layoutX="520.0" layoutY="207.0" text="Find Photos" />
+            <TextField fx:id="findPhotosTagField" layoutX="532.0" layoutY="292.0" prefHeight="26.0" prefWidth="97.0" />
+            <Button fx:id="findPhotosButton" layoutX="520.0" layoutY="327.0" mnemonicParsing="false" text="Search" />
+            <DatePicker layoutX="572.0" layoutY="253.0" prefHeight="26.0" prefWidth="80.0" />
+            <DatePicker layoutX="490.0" layoutY="253.0" prefHeight="26.0" prefWidth="84.0" />
+            <Label layoutX="520.0" layoutY="229.0" text="by date (to-from)" />
+            <Label layoutX="485.0" layoutY="296.0" text="by tag" />
+            <Button fx:id="albumNameButton" layoutX="250.0" layoutY="136.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Edit Album Name" />
+            <Button fx:id="logoutButton" layoutX="585.0" layoutY="14.0" mnemonicParsing="false" text="Logout" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
